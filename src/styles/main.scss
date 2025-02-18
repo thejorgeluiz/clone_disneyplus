@@ -6,7 +6,6 @@
 @use 'faq';
 @use 'footer';
 @use 'header';
-@use 'sass:color';
 
 
 @font-face {
@@ -107,7 +106,7 @@ body {
     border: 1px solid variaveis.$corDeFundoBotaoPrimario;
 
     &:hover {
-        background-color: color.adjust(variaveis.$corDeFundoBotaoPrimario, $lightness:3%);
+        background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
     }
 
     &--secondary {
@@ -115,7 +114,7 @@ body {
         border-color: variaveis.$corDeFundoBotaoSecundario;
 
         &:hover {
-            background-color: color.adjust(variaveis.$corDeFundoBotaoSecundario, $lightness:3%);
+            background-color: (variaveis.$corDeFundoBotaoSecundario, 3%);
         }
     }
     &--dark {
