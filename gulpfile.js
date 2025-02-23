@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const gulpSass = require('gulp-dart-sass');
 const imagemin = require('gulp-imagemin');
 const uglify = require('gulp-uglify');
 
@@ -9,10 +9,9 @@ function scripts() {
     .pipe(gulp.dest('./dist/js'))
 }
 
-
 function styles() {
     return gulp.src('./src/styles/*.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(gulpSass({ outputStyle: 'compressed' }))
     .pipe(gulp.dest('./dist/css'));
 }
 
@@ -21,7 +20,6 @@ function images() {
     .pipe(imagemin())
     .pipe(gulp.dest('./dist/images'));
 }
-
 
 exports.default = gulp.parallel(styles, images, scripts);
 exports.watch = function() {
