@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npm install -g gulp",
     "dev": "gulp watch",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
